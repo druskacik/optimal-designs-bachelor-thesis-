@@ -36,7 +36,7 @@ def save_optimal_designs(designs):
         text_file.write('\n')
     text_file.close()
 
-optimal_designs = compute_optimal_designs(4, 5)
+optimal_designs = compute_optimal_designs(3, 5)
 save_optimal_designs(optimal_designs)
 
 print('END')
