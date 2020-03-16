@@ -1,7 +1,7 @@
 from matrices import compute_all_binary_matrices 
 from variance import compute_variance
 
-from helpers import min_with_indices
+from helpers.minimum_with_indices import min_with_indices
 
 def compute_variances(m, n):
     variances = []
@@ -36,7 +36,7 @@ def save_optimal_designs(designs):
         text_file.write('\n')
     text_file.close()
 
-optimal_designs = compute_optimal_designs(3, 5)
+optimal_designs = compute_optimal_designs(1, 2)
 save_optimal_designs(optimal_designs)
 
 print('END')
