@@ -1,0 +1,40 @@
+Design 1
+0 0 0 
+0 0 0 
+
+Design 2
+0 0 0 
+1 1 1 
+
+Design 3
+0 0 1 
+0 0 1 
+
+Design 4
+0 1 0 
+0 1 0 
+
+Design 5
+0 1 1 
+0 1 1 
+
+Design 6
+1 0 0 
+1 0 0 
+
+Design 7
+1 0 1 
+1 0 1 
+
+Design 8
+1 1 0 
+1 1 0 
+
+Design 9
+1 1 1 
+0 0 0 
+
+Design 10
+1 1 1 
+1 1 1 
+
