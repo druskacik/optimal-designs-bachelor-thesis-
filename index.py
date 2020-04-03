@@ -1,5 +1,5 @@
-from matrices import compute_all_binary_matrices 
-from variance import compute_variance
+from project_math.matrices import compute_all_binary_matrices 
+from project_math.variance import compute_variance
 
 from helpers.minimum_with_indices import min_with_indices
 from helpers.save_designs import save_designs

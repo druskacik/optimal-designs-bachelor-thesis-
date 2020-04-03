@@ -1,5 +1,5 @@
-from matrices import compute_all_binary_matrices
-from variance import compute_variance
+from project_math.matrices import compute_all_binary_matrices
+from project_math.variance import compute_variance
 
 def compute_singular_designs(m, n):
   singular_designs = []
