@@ -83,11 +83,9 @@ def save_optimal_designs(designs):
       text_file.write('\n')
   text_file.close()
 
-sizes = [[2, 2], [2, 3], [3, 3], [3, 4], [3, 5], [4, 4], [4, 5]]
-for size in sizes:
-  designs = read_matrices(size[0], size[1])
-  reduced = reduce_matrices(designs)
-  save_optimal_designs(np.array(reduced))
-  print('Reduced matrices of size ' + str(size[0]) + 'x' + str(size[1]))
+designs = read_matrices(5, 5)
+reduced = reduce_matrices(designs)
+save_optimal_designs(np.array(reduced))
+print('Reduced matrices of size 5x5')
 
 print('END')
