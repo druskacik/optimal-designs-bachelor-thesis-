@@ -83,9 +83,8 @@ def save_optimal_designs(designs):
       text_file.write('\n')
   text_file.close()
 
-designs = read_matrices(5, 5)
+designs = read_matrices(6, 5)
 reduced = reduce_matrices(designs)
 save_optimal_designs(np.array(reduced))
-print('Reduced matrices of size 5x5')
 
 print('END')
