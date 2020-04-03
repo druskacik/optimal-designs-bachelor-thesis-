@@ -1,6 +1,8 @@
 import numpy as np
 from itertools import permutations
 
+from helpers.save_designs import save_designs
+
 def read_matrices(m, n):
   filename = 'optimal_designs/designs' + str(m) + 'x' + str(n) + '.txt'
   matrices = []
@@ -66,25 +68,8 @@ def reduce_matrices(matrices):
   reduce_array(matrices)
   return reduced
 
-def save_optimal_designs(designs):
-  m, n = 0, 0
-  if len(designs) > 0:
-      m, n = designs[0].shape
-  else:
-      return
-  text_file = open('optimal_designs/reduced/designs' + str(m) + 'x' + str(n) + '.txt', 'w')
-  for index, design in enumerate(designs):
-      text_file.write('Design ' + str(index + 1) + '\n')
-      for row in design:
-          text_row = ''
-          for i in row:
-              text_row += str(i) + ' '
-          text_file.write(text_row + '\n')
-      text_file.write('\n')
-  text_file.close()
-
-designs = read_matrices(6, 5)
+designs = read_matrices(2, 2)
 reduced = reduce_matrices(designs)
-save_optimal_designs(np.array(reduced))
+save_designs('optimal_designs/reduced', np.array(reduced))
 
 print('END')

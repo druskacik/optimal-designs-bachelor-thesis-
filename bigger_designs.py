@@ -4,6 +4,7 @@ from itertools import combinations_with_replacement
 from matrices import compute_all_permutations
 from variance import compute_variance
 from helpers.minimum_with_indices import min_with_indices
+from helpers.save_designs import save_designs
 
 def compute_matrices(number_of_rows, number_of_columns):
   perms = compute_all_permutations(number_of_columns)
@@ -35,24 +36,7 @@ def compute_optimal_designs(number_of_rows, number_of_columns):
       optimal_designs.append(np.array(matrices[i]))
   return optimal_designs
 
-def save_optimal_designs(designs):
-  m, n = 0, 0
-  if len(designs) > 0:
-      m, n = designs[0].shape
-  else:
-      return
-  text_file = open('optimal_designs/designs' + str(m) + 'x' + str(n) + '.txt', 'w')
-  for index, design in enumerate(designs):
-      text_file.write('Design ' + str(index + 1) + '\n')
-      for row in design:
-          text_row = ''
-          for i in row:
-              text_row += str(i) + ' '
-          text_file.write(text_row + '\n')
-      text_file.write('\n')
-  text_file.close()
-
 designs = compute_optimal_designs(6, 5)
-save_optimal_designs(designs)
+save_designs('optimal_designs', designs)
 
 print('END')
