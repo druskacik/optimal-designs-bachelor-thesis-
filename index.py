@@ -21,6 +21,6 @@ def compute_optimal_designs(m, n):
     return optimal_designs
 
 optimal_designs = compute_optimal_designs(2, 6)
-save_designs('optimal_designs', optimal_designs)
+save_designs('data/optimal_designs', optimal_designs)
 
 print('END')

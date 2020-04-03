@@ -12,7 +12,7 @@ def compute_singular_designs(m, n):
 
 def save_singular_designs(m, n):
   singular_designs = compute_singular_designs(m, n)
-  text_file = open('singular_designs/designs' + str(m) + 'x' + str(n) + '.txt', 'w')
+  text_file = open('data/singular_designs/designs' + str(m) + 'x' + str(n) + '.txt', 'w')
   for index, design in enumerate(singular_designs):
       text_file.write('Design ' + str(index + 1) + '\n')
       for row in design:

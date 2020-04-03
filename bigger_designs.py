@@ -37,6 +37,6 @@ def compute_optimal_designs(number_of_rows, number_of_columns):
   return optimal_designs
 
 designs = compute_optimal_designs(6, 5)
-save_designs('optimal_designs', designs)
+save_designs('data/optimal_designs', designs)
 
 print('END')
