@@ -4,7 +4,7 @@ from itertools import permutations
 from helpers.save_designs import save_designs
 
 def read_matrices(m, n):
-  filename = 'optimal_designs/designs' + str(m) + 'x' + str(n) + '.txt'
+  filename = 'data/optimal_designs/designs' + str(m) + 'x' + str(n) + '.txt'
   matrices = []
   with open(filename) as f:
     matrix = []
@@ -68,7 +68,7 @@ def reduce_matrices(matrices):
   reduce_array(matrices)
   return reduced
 
-designs = read_matrices(2, 2)
+designs = read_matrices(3, 7)
 reduced = reduce_matrices(designs)
 save_designs('data/optimal_designs/reduced', np.array(reduced))
 

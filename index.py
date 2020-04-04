@@ -9,7 +9,7 @@ def compute_variances(m, n):
     binary_matrices = compute_all_binary_matrices(m, n)
     for matrix in binary_matrices:
         model_variace = compute_variance(matrix)
-        variances.append(round(model_variace, 3))
+        variances.append(round(model_variace, 5))
     return binary_matrices, variances
 
 def compute_optimal_designs(m, n):
@@ -20,7 +20,7 @@ def compute_optimal_designs(m, n):
         optimal_designs.append(matrices[i])
     return optimal_designs
 
-optimal_designs = compute_optimal_designs(2, 6)
+optimal_designs = compute_optimal_designs(3, 7)
 save_designs('data/optimal_designs', optimal_designs)
 
 print('END')
