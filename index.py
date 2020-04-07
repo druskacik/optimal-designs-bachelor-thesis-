@@ -20,7 +20,7 @@ def compute_optimal_designs(m, n):
         optimal_designs.append(matrices[i])
     return optimal_designs
 
-optimal_designs = compute_optimal_designs(3, 7)
+optimal_designs = compute_optimal_designs(3, 6)
 save_designs('data/optimal_designs', optimal_designs)
 
 print('END')

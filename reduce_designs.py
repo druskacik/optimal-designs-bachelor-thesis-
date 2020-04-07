@@ -68,7 +68,7 @@ def reduce_matrices(matrices):
   reduce_array(matrices)
   return reduced
 
-designs = read_matrices(3, 7)
+designs = read_matrices(6, 4)
 reduced = reduce_matrices(designs)
 save_designs('data/optimal_designs/reduced', np.array(reduced))
 

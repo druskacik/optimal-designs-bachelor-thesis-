@@ -1,8 +1,8 @@
 import numpy as np
 from itertools import combinations_with_replacement
 
-from matrices import compute_all_permutations
-from variance import compute_variance
+from project_math.matrices import compute_all_permutations
+from project_math.variance import compute_variance
 from helpers.minimum_with_indices import min_with_indices
 from helpers.save_designs import save_designs
 
@@ -36,7 +36,7 @@ def compute_optimal_designs(number_of_rows, number_of_columns):
       optimal_designs.append(np.array(matrices[i]))
   return optimal_designs
 
-designs = compute_optimal_designs(6, 5)
+designs = compute_optimal_designs(6, 4)
 save_designs('data/optimal_designs', designs)
 
 print('END')
