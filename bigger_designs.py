@@ -1,24 +1,9 @@
 import numpy as np
-from itertools import combinations_with_replacement
 
-from project_math.matrices import compute_all_permutations
 from project_math.variance import compute_variance
+from project_math.bigger_matrices import compute_matrices
 from helpers.minimum_with_indices import min_with_indices
 from helpers.save_designs import save_designs
-
-def compute_matrices(number_of_rows, number_of_columns):
-  perms = compute_all_permutations(number_of_columns)
-  combs = combinations_with_replacement(perms, number_of_rows)
-  matrices = []
-  for combination in combs:
-    matrix = []
-    for row in combination:
-      matrix_row = []
-      for value in row:
-        matrix_row.append(int(value))
-      matrix.append(matrix_row)
-    matrices.append(matrix)
-  return matrices
 
 def compute_variances(number_of_rows, number_of_columns):
   binary_matrices = compute_matrices(number_of_rows, number_of_columns)
