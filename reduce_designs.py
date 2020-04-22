@@ -2,6 +2,7 @@ import numpy as np
 from itertools import permutations
 
 from helpers.save_designs import save_designs
+from helpers.permute_matrix import permute_matrix
 
 def read_matrices(m, n):
   filename = 'data/optimal_designs/designs' + str(m) + 'x' + str(n) + '.txt'
@@ -20,38 +21,6 @@ def read_matrices(m, n):
         matrix.append(row)
     matrices.append(matrix)
   return matrices[1:]
-
-def permute_by_rows(matrix):
-  matrices = []
-  permutation_string = ''
-  for i in range(len(matrix)):
-    permutation_string += str(i)
-  perms = permutations(permutation_string)
-  for permutation in perms:
-    permuted = []
-    for index in permutation:
-      permuted.append(matrix[int(index)])
-    if permuted not in matrices:
-      matrices.append(permuted)
-  return matrices
-
-# beta
-def permute_matrix(matrix):
-  matrices = []
-  permutation_string = ''
-  for i in range(len(matrix)):
-    permutation_string += str(i)
-  perms = permutations(permutation_string)
-  for permutation in perms:
-    permuted = []
-    for index in permutation:
-      permuted.append(matrix[int(index)])
-    column_permutations = permute_by_rows(np.array(permuted).transpose().tolist())
-    for matrix in column_permutations:
-      matrix = np.array(matrix).transpose().tolist()
-      if matrix not in matrices:
-        matrices.append(matrix)
-  return matrices
 
 def reduce_matrices(matrices):
   reduced = []
